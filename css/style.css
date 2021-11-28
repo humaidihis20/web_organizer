@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap");
+
+:root {
+  /*      Theme colors        */
+  --text-gray: #3f4954;
+  --text-light: #686666da;
+  --bg-color: #0f0f0f;
+  --white: #ffffff;
+  --midnight: #104f55;
+
+  /* gradient color   */
+  --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+  /*      theme font-family   */
+  --Abel: "Abel", cursive;
+  --Anton: "Anton", cursive;
+  --Josefin: "Josefin", cursive;
+  --Lexend: "Lexend", cursive;
+  --Livvic: "Livvic", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  padding-bottom: 200px;
+}
+
+/* Navbar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding: 0 4rem;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  z-index: 2;
+  transition: 0.6s;
+}
+
+header .logo {
+  font-size: 1.3rem;
+}
+
+header .logo a {
+  /* font-family: "Caveat", cursive; */
+  font-family: "Oxygen", sans-serif;
+  font-weight: 700;
+  color: #212121;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+header .logo a:hover span {
+  color: #fff;
+}
+
+header nav ul {
+  font-family: "Oxygen", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+header nav ul li a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #212121;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+header nav ul li:hover a {
+  color: black;
+}
+
+header nav ul li a.active {
+  border-bottom: 2px solid #212121;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+/* End Navbar */
+
+/* Home */
+section.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/beach.jpg");
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+section.home::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 70%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  position: absolute;
+  bottom: 0;
+}
+
+section .header {
+  width: 800px;
+  background: rgba(250, 241, 241, 0.1);
+  transition: all 0.4s;
+  z-index: 1;
+}
+
+section .header:hover {
+  background: transparent;
+}
+
+section .header h1 {
+  font-family: "Balsamiq Sans", cursive;
+  font-weight: 700;
+  font-size: 45px;
+  text-align: center;
+  color: #212121;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+section .header p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+/* End Home */
+
+/* Tentang */
+section.tentang {
+  margin: 50px auto;
+}
+
+section.tentang h1 {
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 30px;
+}
+
+.container-tentang {
+  width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.about {
+  width: 45%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.about.tentang_satu {
+  font-size: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.about.tentang_dua {
+  font-size: 20px;
+  background-image: url(../img/venue.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+.about.tentang_dua img {
+  height: 25rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* End Tentang */
+
+/* header .form-login {
+  display: flex;
+} */
+
+/* Form Login */
+/* header .form-login a:nth-child(1) {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 0.2rem;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.2rem 0.8rem;
+  background-color: #757575;
+  transition: 0.3s;
+}
+
+header .form-login a:nth-child(1):hover {
+  background-color: #9e9e9e;
+}
+
+header .form-login a:nth-child(2) {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 0.2rem;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.2rem 0.8rem;
+  background-color: #757575;
+  transition: 0.3s;
+}
+
+header .form-login a:nth-child(2):hover {
+  background-color: #9e9e9e;
+} */
+/* End Form Login */
