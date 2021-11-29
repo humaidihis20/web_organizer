@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Organizered</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- AOS -->
+    <link rel="stylesheet" href="sass/aos.css" />
+
+    <!-- Style Css -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
   <body>
@@ -22,6 +34,15 @@
           <li><a href="#testimoni">Testimoni</a></li>
         </ul>
       </nav>
+      <div class="menu-toggle">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-btn"></i>
+      </div>
+
+      <form action="" class="search-container">
+        <input type="search" placeholder="Search..." id="search-bar" name="" />
+        <label for="search-bar" class="fas fa-search"></label>
+      </form>
       <!-- <div class="form-login">
         <a href="#">Login</a>
         <a href="#">Registrasi</a>
@@ -31,9 +52,7 @@
 
     <!-- home -->
     <section class="home" id="home">
-      <!-- <div id="particles-js"></div> -->
-
-      <div class="header">
+      <div class="header_home">
         <h1>Wedding Organizer</h1>
         <p>
           Jasa Paket Pernikahan Lengkap <br />
@@ -46,7 +65,7 @@
     <!-- tentang -->
     <section class="tentang" id="tentang">
       <h1>Tentang</h1>
-      <div class="container-tentang">
+      <div class="container-tentang" data-aos="fade-in" data-aos-easing="ease-in-out">
         <div class="about tentang_satu">
           <p>
             Kami Provide 100% Kebutuhan Pernikahan Kami Menawarkan Jasa Paket Pernikahan Lengkap di Gedung, Aula, dan Di Rumah di Jakarta dan Bekasi, Yaitu Rincian, Paket, dan Acuan Yang Disesuaikan Kebutuhan Customer. Paket Wedding Bisa Di
@@ -55,7 +74,6 @@
         </div>
 
         <div class="about tentang_dua">
-          <!-- <img src="./img/venue.jpg" alt="" /> -->
           <p>
             Kabar baik bagi para calon pengantin, kini tak perlu lagi pusing dalam proses perencanaan dan persiapan pernikahan impian. Serahkan saja pada wedding organizer dan wedding planner handal di Jakarta yang selalu siap membantu Anda
             dalam mewujudkan konsep acara yang diidamkan dan memastikan semua rencana berjalan sesuai jadwal di hari besar tersebut.
@@ -64,7 +82,14 @@
       </div>
     </section>
     <!-- end tentang -->
+
     <script type="text/javascript" src="/js/script.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
     <script src="js/particles.js"></script>
   </body>
 </html>

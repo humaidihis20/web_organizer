@@ -4,6 +4,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Allan:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap");
+
 :root {
   /*      Theme colors        */
   --text-gray: #3f4954;
@@ -21,6 +25,9 @@
   --Josefin: "Josefin", cursive;
   --Lexend: "Lexend", cursive;
   --Livvic: "Livvic", cursive;
+  --Allan: "Allan", cursive;
+  --Dancing_Script: "Dancing Script", cursive;
+  --Balsamiq: "Balsamiq Sans", cursive;
 }
 
 * {
@@ -30,9 +37,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 62.5%;
-  padding-bottom: 200px;
+  padding-bottom: 500px;
+  background-color: var(--white);
 }
 
 /* Navbar */
@@ -42,29 +54,30 @@ header {
   left: 0;
   right: 0;
   display: flex;
-  padding: 0 4rem;
+  padding: 0 2rem;
   justify-content: space-between;
   align-items: center;
   height: 50px;
   z-index: 2;
   transition: 0.6s;
+  background-color: rgb(238, 237, 237);
 }
 
 header .logo {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 
 header .logo a {
   /* font-family: "Caveat", cursive; */
-  font-family: "Oxygen", sans-serif;
+  font-family: "Dancing Script", cursive;
   font-weight: 700;
-  color: #212121;
+  color: var(--midnight);
   text-decoration: none;
   text-transform: capitalize;
 }
 
 header .logo a:hover span {
-  color: #fff;
+  color: #009688;
 }
 
 header nav ul {
@@ -78,17 +91,90 @@ header nav ul {
 header nav ul li a {
   margin-left: 20px;
   text-decoration: none;
-  color: #212121;
-  font-weight: 600;
+  color: var(--midnight);
+  font-weight: 500;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
 }
 
 header nav ul li:hover a {
-  color: black;
+  color: #4db6ac;
 }
 
 header nav ul li a.active {
   border-bottom: 2px solid #212121;
+}
+
+header form.search-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  border-top: 0.1rem solid rgba(15, 15, 15, 0.2);
+  background-color: rgb(238, 237, 237);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: 0.5s;
+}
+
+header form.search-container.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+form.search-container #search-bar {
+  width: 90%;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  text-transform: none;
+  border-radius: 5px;
+  border: none;
+  padding: 0.7rem;
+}
+
+form.search-container label {
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--midnight);
+  transition: 0.4s;
+}
+
+form.search-container label:hover {
+  transform: rotate(360deg);
+  color: #009688;
+}
+
+#menu-bars {
+  display: none;
+}
+
+.menu-toggle i.fa-bars {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: var(--midnight);
+  border: 1.5px solid var(--midnight);
+  padding: 0.4rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle i.fa-bars:hover {
+  color: #009688;
+}
+
+.menu-toggle i.fa-search {
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 5px;
+  color: var(--midnight);
+  transition: 0.4s;
+}
+
+.menu-toggle i.fa-search:hover {
+  transform: rotate(360deg);
+  color: #009688;
 }
 
 .sticky {
@@ -120,31 +206,31 @@ section.home::after {
   bottom: 0;
 }
 
-section .header {
+section .header_home {
   width: 800px;
   background: rgba(250, 241, 241, 0.1);
   transition: all 0.4s;
   z-index: 1;
 }
 
-section .header:hover {
+section .header_home:hover {
   background: transparent;
 }
 
-section .header h1 {
-  font-family: "Balsamiq Sans", cursive;
+section .header_home h1 {
+  font-family: var(--Dancing_Script);
   font-weight: 700;
-  font-size: 45px;
+  font-size: 4rem;
   text-align: center;
   color: #212121;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
-section .header p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+section .header_home p {
+  font-family: var(--Balsamiq);
   font-weight: 600;
   text-align: center;
-  font-size: 20px;
+  font-size: 1.5rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
 }
 /* End Home */
@@ -194,6 +280,65 @@ section.tentang h1 {
 }
 
 /* End Tentang */
+@media screen and (max-width: 785px) {
+  /* Navbar */
+  header .navbar {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fafafa;
+    border-top: 0.1rem solid rgba(15, 15, 15, 0.2);
+    padding: 0.7rem 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: 0.4s;
+  }
+
+  header .navbar ul {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0.1rem 1rem;
+    box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.7);
+    background: #fff;
+    width: 97%;
+  }
+
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  header .logo {
+    order: 1;
+  }
+
+  .navbar ul li {
+    margin: 1.5rem 0;
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.7);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .navbar ul li:hover {
+    box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.7);
+  }
+
+  #menu-bars {
+    display: initial;
+  }
+
+  /* Home */
+  section .header_home h1 {
+    font-size: 3rem;
+  }
+  section .header_home p {
+    font-size: 1.2rem;
+  }
+}
 
 /* header .form-login {
   display: flex;
