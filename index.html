@@ -14,6 +14,7 @@
       referrerpolicy="no-referrer"
     />
     <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="sass/aos.css" />
 
     <!-- Style Css -->
@@ -64,16 +65,20 @@
 
     <!-- tentang -->
     <section class="tentang" id="tentang">
-      <h1>Tentang</h1>
-      <div class="container-tentang" data-aos="fade-in" data-aos-easing="ease-in-out">
-        <div class="about tentang_satu">
+      <div class="head_tentang">
+        <h1>Tentang</h1>
+        <span></span>
+      </div>
+
+      <div class="container-tentang">
+        <div class="about tentang_satu" data-aos="fade-right" data-aos-duration="1000">
           <p>
             Kami Provide 100% Kebutuhan Pernikahan Kami Menawarkan Jasa Paket Pernikahan Lengkap di Gedung, Aula, dan Di Rumah di Jakarta dan Bekasi, Yaitu Rincian, Paket, dan Acuan Yang Disesuaikan Kebutuhan Customer. Paket Wedding Bisa Di
             Customize.
           </p>
         </div>
 
-        <div class="about tentang_dua">
+        <div class="about tentang_dua" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
           <p>
             Kabar baik bagi para calon pengantin, kini tak perlu lagi pusing dalam proses perencanaan dan persiapan pernikahan impian. Serahkan saja pada wedding organizer dan wedding planner handal di Jakarta yang selalu siap membantu Anda
             dalam mewujudkan konsep acara yang diidamkan dan memastikan semua rencana berjalan sesuai jadwal di hari besar tersebut.
@@ -83,12 +88,56 @@
     </section>
     <!-- end tentang -->
 
-    <script type="text/javascript" src="/js/script.js"></script>
+    <section class="aneka_paket" id="aneka_paket">
+      <div class="head_aneka_pkt">
+        <h1>Aneka Paket</h1>
+        <span></span>
+      </div>
+
+      <div class="container-aneka_pkt">
+        <div class="aneka aneka_paket_satu">
+          <h2>Paket Simpel</h2>
+          <p>
+            <span class="p_simpel_a"> Paket simpel A Untuk 200 orang</span> <br />
+            Untuk mengetahui selengkapnya bisa download PDF di bawah ini <br />
+            <span class="p_simpel_a">Paket simpel B Untuk 400 orang</span> <br />
+            Untuk mengetahui selengkapnya bisa download PDF di bawah ini
+          </p>
+          <div class="links_buttons">
+            <a href="https://drive.google.com/open?id=1msPciHuV1XnK-RnwNZKO_Iu8b1-sz3Ge" class="btn paket_a">Download</a>
+          </div>
+        </div>
+
+        <div class="aneka aneka_paket_dua">
+          <h2>Paket Mewah</h2>
+          <p>
+            <span class="p_mewah_a"> Paket mewah A Untuk 1000 orang</span> <br />
+            Untuk mengetahui selengkapnya bisa download PDF di bawah ini <br />
+            <span class="p_mewah_a">Paket mewah A Untuk 1500 orang</span> <br />
+            Untuk mengetahui selengkapnya bisa download PDF di bawah ini
+          </p>
+          <div class="links_buttons">
+            <a href="#" class="btn paket_b">Download</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- <script src="js/aos.js"></script> -->
     <script>
-      AOS.init();
+      // AOS
+      AOS.init({
+        once: true,
+        // disable: function () {
+        //   var maxWidth = 820;
+        //   return window.innerWidth < maxWidth;
+        // },
+      });
     </script>
+
+    <script type="text/javascript" src="js/script.js"></script>
 
     <script src="js/particles.js"></script>
   </body>

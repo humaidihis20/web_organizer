@@ -43,8 +43,8 @@ html {
 
 body {
   font-size: 62.5%;
-  padding-bottom: 500px;
-  background-color: var(--white);
+  padding-bottom: 200px;
+  background-color: #fafafa;
 }
 
 /* Navbar */
@@ -78,6 +78,10 @@ header .logo a {
 
 header .logo a:hover span {
   color: #009688;
+}
+
+header nav {
+  margin-left: auto;
 }
 
 header nav ul {
@@ -150,6 +154,11 @@ form.search-container label:hover {
   display: none;
 }
 
+.menu-toggle {
+  display: flex;
+  margin-left: 10px;
+}
+
 .menu-toggle i.fa-bars {
   font-size: 1.2rem;
   font-weight: bolder;
@@ -165,6 +174,9 @@ form.search-container label:hover {
 }
 
 .menu-toggle i.fa-search {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
   font-size: 1.2rem;
   cursor: pointer;
   margin-left: 5px;
@@ -236,22 +248,31 @@ section .header_home p {
 /* End Home */
 
 /* Tentang */
-section.tentang {
-  margin: 50px auto;
+section.tentang .head_tentang {
+  text-align: center;
+  padding: 2.5rem 0;
+  /* border-bottom: 3px solid rgb(92, 86, 86); */
 }
 
-section.tentang h1 {
-  text-align: center;
+.head_tentang h1 {
+  font-family: var(--Dancing_Script);
   font-size: 30px;
-  padding-bottom: 30px;
+  margin-bottom: 2rem;
+}
+
+.head_tentang span {
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+  border-bottom: 2px solid rgb(92, 86, 86);
 }
 
 .container-tentang {
   width: 900px;
-  margin: auto;
+  margin: 20px auto;
   display: flex;
   justify-content: space-evenly;
-  position: relative;
+  /* position: relative; */
 }
 
 .about {
@@ -260,26 +281,176 @@ section.tentang h1 {
   box-sizing: border-box;
 }
 
-.about.tentang_satu {
+.tentang_satu {
   font-size: 20px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+  transition: 0.3s;
 }
 
-.about.tentang_dua {
-  font-size: 20px;
-  background-image: url(../img/venue.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
-}
-.about.tentang_dua img {
-  height: 25rem;
-  width: 100%;
-  object-fit: cover;
+.about.tentang_satu p {
+  color: black;
+  font-family: var(--Abel);
+  font-weight: bold;
 }
 
+.tentang_satu:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.tentang_dua {
+  font-size: 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.tentang_dua:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.about.tentang_dua p {
+  font-family: var(--Abel);
+  color: black;
+  font-weight: bold;
+}
 /* End Tentang */
+
+section {
+  padding: 2rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Aneka Paket */
+.head_aneka_pkt {
+  text-align: center;
+  padding: 2.5rem 0;
+}
+
+.head_aneka_pkt h1 {
+  /* width: 300px; */
+  color: var(--midnight);
+  font-family: var(--Dancing_Script);
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+.head_aneka_pkt span {
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+  border-bottom: 2px solid rgb(92, 86, 86);
+}
+
+.container-aneka_pkt {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px auto;
+  width: 900px;
+}
+
+.aneka {
+  width: 40%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.aneka.aneka_paket_satu {
+  font-size: 18px;
+  box-shadow: 1px 5px 1px rgba(0, 0, 0, 0.7);
+}
+
+.aneka.aneka_paket_satu h2 {
+  font-size: 30px;
+  font-family: var(--Balsamiq);
+}
+
+.aneka.aneka_paket_satu p {
+  font-family: var(--Abel);
+}
+
+.p_simpel_a {
+  font-family: var(--Balsamiq);
+  padding: 2px;
+  font-size: 20px;
+  background-color: #bdbdbd;
+  border-radius: 2px;
+}
+
+.links_buttons {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  text-decoration: none;
+  font-weight: bold;
+  border: 0.1px solid black;
+  padding: 5px 5px;
+  border-radius: 5px;
+}
+
+.btn.paket_a {
+  background-color: rgba(15, 15, 15, 0.2);
+  color: #0f0f0f;
+  transition: 0.5s;
+}
+
+.btn.paket_a:hover {
+  background-color: #fff;
+  color: #009688;
+}
+
+.aneka.aneka_paket_dua {
+  font-size: 18px;
+  box-shadow: 1px 5px 1px rgba(0, 0, 0, 0.7);
+}
+
+.aneka.aneka_paket_dua h2 {
+  font-size: 30px;
+  font-family: var(--Balsamiq);
+}
+
+.aneka.aneka_paket_dua p {
+  font-family: var(--Abel);
+}
+.aneka.aneka_paket_dua span {
+  font-family: var(--Balsamiq);
+  padding: 2px;
+  font-size: 20px;
+  background-color: #bdbdbd;
+  border-radius: 2px;
+}
+
+.btn.paket_b {
+  background-color: rgba(15, 15, 15, 0.2);
+  color: #0f0f0f;
+  transition: 0.5s;
+}
+
+.btn.paket_b:hover {
+  background-color: #fff;
+  color: #009688;
+}
+
+/* End Aneka Paket */
+
+@media screen and (max-width: 920px) {
+  .container-tentang {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .about.tentang_satu {
+    flex: 0.4;
+  }
+
+  .about.tentang_dua {
+    flex: 0.4;
+  }
+}
+
 @media screen and (max-width: 785px) {
   /* Navbar */
   header .navbar {
@@ -331,12 +502,47 @@ section.tentang h1 {
     display: initial;
   }
 
+  .menu-toggle i.fa-search {
+    margin-top: 0;
+  }
+
   /* Home */
   section .header_home h1 {
     font-size: 3rem;
   }
   section .header_home p {
     font-size: 1.2rem;
+  }
+
+  /* Tentang */
+  .container-tentang {
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .about.tentang_satu {
+    width: 400px;
+  }
+
+  .about.tentang_dua {
+    margin-top: 2rem;
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container-tentang {
+    width: 100%;
+  }
+
+  .about.tentang_satu {
+    width: 400px;
+  }
+
+  .about.tentang_dua {
+    width: 400px;
   }
 }
 
