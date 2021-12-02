@@ -15,6 +15,7 @@
   --bg-color: #0f0f0f;
   --white: #ffffff;
   --midnight: #104f55;
+  --lighten_2: #4db6ac;
 
   /* gradient color   */
   --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
@@ -43,7 +44,7 @@ html {
 
 body {
   font-size: 62.5%;
-  padding-bottom: 200px;
+  /* padding-bottom: 200px; */
   background-color: #fafafa;
 }
 
@@ -256,6 +257,7 @@ section.tentang .head_tentang {
 
 .head_tentang h1 {
   font-family: var(--Dancing_Script);
+  color: #212121;
   font-size: 30px;
   margin-bottom: 2rem;
 }
@@ -264,7 +266,7 @@ section.tentang .head_tentang {
   display: inline-block;
   text-align: center;
   width: 200px;
-  border-bottom: 2px solid rgb(92, 86, 86);
+  border-bottom: 2px solid #212121;
 }
 
 .container-tentang {
@@ -288,7 +290,7 @@ section.tentang .head_tentang {
 }
 
 .about.tentang_satu p {
-  color: black;
+  color: #212121;
   font-family: var(--Abel);
   font-weight: bold;
 }
@@ -308,7 +310,7 @@ section.tentang .head_tentang {
 
 .about.tentang_dua p {
   font-family: var(--Abel);
-  color: black;
+  color: #212121;
   font-weight: bold;
 }
 /* End Tentang */
@@ -326,18 +328,17 @@ section {
 }
 
 .head_aneka_pkt h1 {
-  /* width: 300px; */
-  color: var(--midnight);
+  color: #212121;
   font-family: var(--Dancing_Script);
   font-size: 30px;
-  padding-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .head_aneka_pkt span {
   display: inline-block;
   text-align: center;
   width: 200px;
-  border-bottom: 2px solid rgb(92, 86, 86);
+  border-bottom: 2px solid #212121;
 }
 
 .container-aneka_pkt {
@@ -383,21 +384,22 @@ section {
 
 .btn {
   text-decoration: none;
-  font-weight: bold;
-  border: 0.1px solid black;
+  font-weight: 600;
   padding: 5px 5px;
   border-radius: 5px;
+  background-color: #00695c;
+  /* background-color: rgba(15, 15, 15, 0.2); */
 }
 
 .btn.paket_a {
-  background-color: rgba(15, 15, 15, 0.2);
   color: #0f0f0f;
+  background-color: var(--text-gray);
   transition: 0.5s;
 }
 
 .btn.paket_a:hover {
-  background-color: #fff;
-  color: #009688;
+  background-color: #9e9e9e;
+  color: #fff;
 }
 
 .aneka.aneka_paket_dua {
@@ -413,28 +415,348 @@ section {
 .aneka.aneka_paket_dua p {
   font-family: var(--Abel);
 }
-.aneka.aneka_paket_dua span {
+
+.p_mewah_a {
   font-family: var(--Balsamiq);
   padding: 2px;
   font-size: 20px;
-  background-color: #bdbdbd;
+  background-color: var(--lighten_2);
   border-radius: 2px;
 }
 
 .btn.paket_b {
-  background-color: rgba(15, 15, 15, 0.2);
   color: #0f0f0f;
   transition: 0.5s;
 }
 
 .btn.paket_b:hover {
-  background-color: #fff;
-  color: #009688;
+  background-color: #26a69a;
+  color: #fff;
 }
-
 /* End Aneka Paket */
 
+/* Honney Moon */
+.head_honney_moon {
+  text-align: center;
+  padding: 2.5rem 0;
+}
+
+.head_honney_moon h1 {
+  color: #212121;
+  font-size: 30px;
+  font-family: var(--Dancing_Script);
+  margin-bottom: 2rem;
+}
+
+.head_honney_moon span {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  border-bottom: 2px solid #212121;
+}
+
+.content_honney_moon {
+  /* width: 800px; */
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  background-image: url("../img/portfolio/hy15.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: 3rem;
+  filter: contrast(0.8);
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.content_honney_moon p {
+  display: flex;
+  text-align: center;
+  font-family: var(--Balsamiq);
+  width: 900px;
+  height: 200px;
+  align-items: center;
+  font-size: 25px;
+  color: black;
+  font-weight: 550;
+  box-sizing: border-box;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 1);
+}
+
+.gambar_honney_moon {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 0;
+}
+
+.gambar_honney_moon img {
+  display: flex;
+  margin: 8px;
+  width: 350px;
+  cursor: pointer;
+}
+
+.gambar_honney_moon img {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+  transition: 0.4s;
+}
+
+.gambar_honney_moon img:hover {
+  opacity: 0.7;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 1);
+}
+
+.modal {
+  z-index: 3;
+  display: none;
+  padding-top: 10px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal .modalGambar {
+  width: 800px;
+  cursor: auto;
+}
+
+.modal .modalGambar:hover {
+  opacity: 1;
+}
+
+.modal .modal-content {
+  margin: 100px auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.modal .close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.modal .close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* End Honney Moon */
+
+/* Testimoni */
+
+.head_testimoni {
+  text-align: center;
+  padding: 2.5rem 0;
+}
+
+.head_testimoni h1 {
+  font-size: 30px;
+  font-family: var(--Dancing_Script);
+  color: #212121;
+  margin-bottom: 2rem;
+}
+
+.head_testimoni span {
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+  border-bottom: 2px solid #212121;
+}
+
+.content_testimoni {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #eeeeee;
+}
+
+.testi {
+  /* width: 80%; */
+  /* padding: 0 2rem; */
+  box-sizing: border-box;
+}
+
+.content_testimoni .testimoni_satu {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 1rem;
+  margin: 0 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.content_testimoni .testimoni_satu:hover {
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.content_testimoni .testimoni_satu img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.content_testimoni .testimoni_satu h1 {
+  font-size: 23px;
+  font-family: var(--Abel);
+}
+
+.content_testimoni .testimoni_satu p {
+  font-size: 17px;
+  padding-bottom: 1rem;
+}
+
+.content_testimoni .testimoni_satu i {
+  font-size: 13px;
+  color: var(--midnight);
+}
+
+.content_testimoni .testimoni_dua {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 1rem;
+  margin: 0 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.content_testimoni .testimoni_dua:hover {
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.content_testimoni .testimoni_dua img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.content_testimoni .testimoni_dua h1 {
+  font-family: var(--Abel);
+  font-size: 23px;
+}
+
+.content_testimoni .testimoni_dua p {
+  font-size: 17px;
+  padding-bottom: 1rem;
+}
+
+.content_testimoni .testimoni_dua i {
+  font-size: 13px;
+  color: var(--midnight);
+}
+
+/*  */
+.content_testimoni .testimoni_tiga {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 1rem;
+  margin: 0 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.content_testimoni .testimoni_tiga:hover {
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.content_testimoni .testimoni_tiga img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.content_testimoni .testimoni_tiga h1 {
+  font-family: var(--Abel);
+  font-size: 23px;
+}
+
+.content_testimoni .testimoni_tiga p {
+  font-size: 17px;
+  padding-bottom: 1rem;
+}
+
+.content_testimoni .testimoni_tiga i {
+  font-size: 13px;
+  color: var(--midnight);
+}
+
+/*  */
+.content_testimoni .testimoni_empat {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 1rem;
+  margin: 0 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+.content_testimoni .testimoni_empat:hover {
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.content_testimoni .testimoni_empat img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.content_testimoni .testimoni_empat h1 {
+  font-family: var(--Abel);
+  font-size: 23px;
+}
+
+.content_testimoni .testimoni_empat p {
+  font-size: 17px;
+  padding-bottom: 1rem;
+}
+
+.content_testimoni .testimoni_empat i {
+  font-size: 13px;
+  color: var(--midnight);
+}
+
+/* End Testimoni */
+
+@media screen and (max-width: 970px) {
+  .content_honney_moon p {
+    width: 700px;
+    box-shadow: none;
+  }
+}
+
 @media screen and (max-width: 920px) {
+  /* Tentang */
   .container-tentang {
     display: flex;
     justify-content: space-evenly;
@@ -448,6 +770,11 @@ section {
 
   .about.tentang_dua {
     flex: 0.4;
+  }
+
+  /* Aneka Paket */
+  .container-aneka_pkt {
+    width: 100%;
   }
 }
 
@@ -516,23 +843,52 @@ section {
 
   /* Tentang */
   .container-tentang {
-    margin-top: 20px;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
   }
 
   .about.tentang_satu {
-    width: 400px;
+    width: 500px;
   }
 
   .about.tentang_dua {
     margin-top: 2rem;
-    width: 400px;
+    width: 500px;
+  }
+
+  /* Aneka Paket */
+  .container-aneka_pkt {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aneka {
+    width: 500px;
+    margin: 20px 0;
+  }
+
+  /* Honney Moon */
+  .content_honney_moon p {
+    font-size: 20px;
+    width: 600px;
+    box-shadow: none;
+    padding: 0 0.7rem;
+  }
+
+  .gambar_honney_moon img {
+    box-sizing: border-box;
+    width: 500px;
+  }
+
+  /* modal gambar honney moon */
+  .modal-content {
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 576px) {
+  /* Tentang */
   .container-tentang {
     width: 100%;
   }
@@ -543,6 +899,171 @@ section {
 
   .about.tentang_dua {
     width: 400px;
+  }
+
+  /* Aneka Paket */
+  .container-aneka_pkt {
+    width: 100%;
+  }
+
+  .aneka {
+    width: 400px;
+  }
+
+  /* Honney Moon */
+  .content_honney_moon p {
+    font-size: 17px;
+    padding: 0 1rem;
+    box-shadow: none;
+  }
+
+  .gambar_honney_moon img {
+    box-sizing: border-box;
+    width: 350px;
+  }
+
+  .modal .modal-content {
+    margin: 180px auto;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  /* Home */
+  section .header_home {
+    margin-top: 100px;
+  }
+
+  section .header_home h1 {
+    font-size: 30px;
+  }
+
+  section .header_home p {
+    font-size: 16px;
+  }
+
+  /* Tentang */
+  .container-tentang {
+    width: 100%;
+  }
+
+  .about.tentang_satu {
+    width: 300px;
+  }
+
+  .about.tentang_dua {
+    width: 300px;
+  }
+
+  /* Aneka Paket */
+  .container-aneka_pkt {
+    width: 100%;
+  }
+
+  .aneka {
+    width: 300px;
+  }
+
+  /* Honney Moon */
+  .content_honney_moon p {
+    font-size: 17px;
+    padding: 0 1rem;
+    box-shadow: none;
+  }
+
+  .gambar_honney_moon img {
+    box-sizing: border-box;
+    width: 240px;
+  }
+}
+
+@media screen and (max-width: 362px) {
+  /* header */
+  header {
+    justify-content: space-between;
+    padding: 0 0.5rem;
+  }
+
+  header .logo {
+    font-size: 20px;
+  }
+
+  .menu-toggle i.fa-bars {
+    font-size: 15px;
+  }
+
+  .menu-toggle i.fa-search {
+    font-size: 15px;
+  }
+
+  /* Home */
+  section .header_home h1 {
+    font-size: 20px;
+  }
+
+  /* Tentang */
+  .container-tentang {
+    width: 100%;
+  }
+
+  .about.tentang_satu {
+    width: 200px;
+  }
+
+  .about.tentang_dua {
+    width: 200px;
+  }
+
+  .about.tentang_satu p {
+    font-size: 12px;
+  }
+
+  .about.tentang_dua p {
+    font-size: 12px;
+  }
+
+  /* Aneka Paket */
+  .container-aneka_pkt {
+    width: 100%;
+  }
+
+  .aneka {
+    width: 250px;
+  }
+
+  .aneka.aneka_paket_satu h2 {
+    font-size: 20px;
+  }
+
+  .aneka.aneka_paket_satu p {
+    font-size: 13px;
+  }
+
+  .p_simpel_a {
+    font-size: 15px;
+  }
+
+  .aneka.aneka.aneka_paket_dua h2 {
+    font-size: 20px;
+  }
+
+  .aneka.aneka_paket_dua p {
+    font-size: 13px;
+  }
+
+  .p_mewah_a {
+    font-size: 15px;
+  }
+
+  /* Honney Moon */
+  .content_honney_moon p {
+    font-size: 10px;
+    padding: 0 0.5rem;
+    box-shadow: none;
+  }
+
+  .gambar_honney_moon img {
+    box-sizing: border-box;
+    width: 150px;
   }
 }
 

@@ -57,3 +57,52 @@ window.onscroll = function () {
     navbarSticky.style.boxShadow = "none";
   }
 };
+
+// Modal gambar honney moon
+function onClick(element) {
+  document.getElementById("imgModal").src = element.src;
+  document.getElementById("myModal").style.display = "block";
+}
+
+// GSAP
+gsap.registerPlugin(TextPlugin);
+gsap.to(".home .header_home p", {
+  duration: 15,
+  delay: 2,
+  text: "Jasa Paket Pernikahan Lengkap <br/>  Melayani semua kebutuhan pernikahan, termasuk Honney Moon, Dekorasi Pelaminan, Gaun Pengantin, Entertain, Dokumentasi, Peralatan Pesta dll.",
+});
+
+gsap.from(".home .header_home h1", {
+  duration: 1,
+  x: -50,
+  delay: 0.5,
+  ease: "back",
+  opacity: 0,
+});
+
+// gsap.from(".home .header_home img", {
+//   duration: 1,
+//   opacity: 0,
+//   rotateY: 360,
+// });
+
+// Swiper
+let swiper = new Swiper(".mySwiper", {
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});

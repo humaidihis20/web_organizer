@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="sass/aos.css" />
 
+    <!-- Swiper  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
     <!-- Style Css -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
@@ -31,7 +34,7 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#tentang">Tentang</a></li>
           <li><a href="#aneka_paket">Aneka Paket</a></li>
-          <li><a href="#honeymoon">Honey Moon</a></li>
+          <li><a href="#honney_moon">Honey Moon</a></li>
           <li><a href="#testimoni">Testimoni</a></li>
         </ul>
       </nav>
@@ -55,10 +58,7 @@
     <section class="home" id="home">
       <div class="header_home">
         <h1>Wedding Organizer</h1>
-        <p>
-          Jasa Paket Pernikahan Lengkap <br />
-          Melayani semua kebutuhan pernikahan, termasuk Honney Moon, Dekorasi Pelaminan, Gaun Pengantin, Entertain, Dokumentasi, Peralatan Pesta dll.
-        </p>
+        <p></p>
       </div>
     </section>
     <!-- end home -->
@@ -88,6 +88,7 @@
     </section>
     <!-- end tentang -->
 
+    <!-- aneka paket -->
     <section class="aneka_paket" id="aneka_paket">
       <div class="head_aneka_pkt">
         <h1>Aneka Paket</h1>
@@ -95,7 +96,7 @@
       </div>
 
       <div class="container-aneka_pkt">
-        <div class="aneka aneka_paket_satu">
+        <div class="aneka aneka_paket_satu" data-aos="zoom-in-right" data-aos-duration="1000">
           <h2>Paket Simpel</h2>
           <p>
             <span class="p_simpel_a"> Paket simpel A Untuk 200 orang</span> <br />
@@ -108,20 +109,170 @@
           </div>
         </div>
 
-        <div class="aneka aneka_paket_dua">
+        <div class="aneka aneka_paket_dua" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-delay="200">
           <h2>Paket Mewah</h2>
           <p>
             <span class="p_mewah_a"> Paket mewah A Untuk 1000 orang</span> <br />
             Untuk mengetahui selengkapnya bisa download PDF di bawah ini <br />
-            <span class="p_mewah_a">Paket mewah A Untuk 1500 orang</span> <br />
+            <span class="p_mewah_a">Paket mewah B Untuk 1500 orang</span> <br />
             Untuk mengetahui selengkapnya bisa download PDF di bawah ini
           </p>
           <div class="links_buttons">
-            <a href="#" class="btn paket_b">Download</a>
+            <a href="https://drive.google.com/open?id=1jlXHoXAfSkLKemX5Ruu27ozOzZ0XAOtb" class="btn paket_b">Download</a>
           </div>
         </div>
       </div>
     </section>
+    <!-- end aneka paket -->
+
+    <!-- honney moon -->
+    <section class="honney_moon" id="honney_moon">
+      <div class="head_honney_moon">
+        <h1>Honney Moon</h1>
+        <span></span>
+      </div>
+
+      <div class="content_honney_moon">
+        <p>
+          Ingin pergi liburan namun budget terbatas? Anda dapat memesan tiket pesawat dan kamar hotel sekaligus untuk mendapatkan harga yang lebih murah. Dengan memesan keduanya dalam bentuk paket, perencanaan bulan madu Anda menjadi lebih
+          praktis karena urusan selesai dalam satu waktu. Anda juga bisa memilih berbagai paket wisata yang kami tawarkan, dan modifikasi sesuka hati untuk mendapatkan kombinasi yang Anda inginkan.
+        </p>
+      </div>
+
+      <div class="gambar_honney_moon">
+        <img src="img\portfolio/hy1.jpg" alt="" onclick="onClick(this)" id="myImg" data-aos="flip-left" data-aos-duration="1000" />
+        <img src="img\portfolio/hy3.jpg" alt="" onclick="onClick(this)" id="myImg" data-aos="flip-left" data-aos-duration="1200" />
+        <img src="img\portfolio/hy5.jpg" alt="" onclick="onClick(this)" id="myImg" data-aos="flip-left" data-aos-duration="1400" />
+        <img src="img\portfolio/hy6.jpg" alt="" onclick="onClick(this)" id="myImg" data-aos="flip-left" data-aos-duration="1600" />
+        <img src="img\portfolio/hy7.jpg" alt="" onclick="onClick(this)" id="myImg" data-aos="flip-left" data-aos-duration="1800" />
+        <img src="img\portfolio/hy8.jpg" alt="" onclick="onClick(this)" id="myImg" data-aos="flip-left" data-aos-duration="2000" />
+        <img src="img\portfolio/hy10.jpg" alt="" onclick="onClick(this)" id="myImg" data-aos="flip-left" data-aos-duration="2200" />
+        <img src="img\portfolio/hy11.jpg" alt="" onclick="onClick(this)" id="myImg" data-aos="flip-left" data-aos-duration="2400" />
+        <img src="img\portfolio/hy12.jpg" alt="" onclick="onClick(this)" id="myImg" data-aos="flip-left" data-aos-duration="2600" />
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal" onclick="this.style.display='none'">
+          <span class="close">&times;</span>
+          <img class="modal-content modalGambar" id="imgModal" />
+        </div>
+      </div>
+    </section>
+    <!-- End honney moon -->
+
+    <!-- testimoni -->
+    <section class="testimoni" id="testimoni">
+      <div class="head_testimoni">
+        <h1>Testimoni</h1>
+        <span></span>
+      </div>
+
+      <div class="swiper mySwiper content_testimoni">
+        <div class="swiper-wrapper wrapper">
+          <div class="swiper-slide">
+            <div class="testi testimoni_satu">
+              <img src="img/slider/pic1.png" alt="" />
+              <h1>Andin</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, consequatur!</p>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testi testimoni_dua">
+              <img src="img/slider/pic2.png" alt="" />
+              <h1>Sam</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, sint.</p>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testi testimoni_tiga">
+              <img src="img/slider/pic3.png" alt="" />
+              <h1>Maryam</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, explicabo.</p>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testi testimoni_empat">
+              <img src="img/slider/pic4.png" alt="" />
+              <h1>Rangga</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, eos.</p>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end testimoni -->
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container_footer">
+        <div class="content_footer_satu">
+          <h1>About</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequuntur ipsum nulla cum architecto recusandae consectetur distinctio quia deleniti fuga.</p>
+        </div>
+
+        <div class="content_footer_dua">
+          <h1>Tautan</h1>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#aneka_paket">Aneka Paket</a></li>
+            <li><a href="#honney_moon">Honey Moon</a></li>
+            <li><a href="#testimoni">Testimoni</a></li>
+          </ul>
+        </div>
+
+        <div class="content_footer_tiga">
+          <h1>Kontak</h1>
+          <ul>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+
+        <div class="content_footer_empat">
+          <h1>Follow Us</h1>
+          <ul>
+            <li><a href="www.facebook.com">Facebook</a></li>
+            <li><a href="www.instagram.com">Instagram</a></li>
+            <li><a href="www.twitter.com">Twitter</a></li>
+            <li><a href="www.whatsapp.com">WhatsApp</a></li>
+            <li><a href="www.linkedin.com">Linkedin</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/TextPlugin.min.js"></script>
+
+    <!-- Swiper -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -130,15 +281,11 @@
       // AOS
       AOS.init({
         once: true,
-        // disable: function () {
-        //   var maxWidth = 820;
-        //   return window.innerWidth < maxWidth;
-        // },
       });
     </script>
 
     <script type="text/javascript" src="js/script.js"></script>
 
-    <script src="js/particles.js"></script>
+    <script type="text/javascript" src="js/particles.js"></script>
   </body>
 </html>
