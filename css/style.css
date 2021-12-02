@@ -781,7 +781,7 @@ section .container_footer .content_footer p {
 
 section .container_footer .content_footer ul li {
   list-style: none;
-  padding: 0.5rem 0.2rem;
+  padding: 0.5rem 0;
 }
 
 section .container_footer .content_footer ul li a {
@@ -803,7 +803,7 @@ section .container_footer .content_footer ul li a i:hover {
 }
 
 section .container_footer .content_footer ul li a.wa:hover i {
-  padding-right: 1rem;
+  padding-right: 0.5rem;
 }
 
 section .credit {
