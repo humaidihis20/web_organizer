@@ -803,7 +803,7 @@ section .container_footer .content_footer ul li a i:hover {
 }
 
 section .container_footer .content_footer ul li a.wa:hover i {
-  padding-right: 0.5rem;
+  padding-right: 4px;
 }
 
 section .credit {
