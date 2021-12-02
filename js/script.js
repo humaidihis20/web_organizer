@@ -67,7 +67,7 @@ function onClick(element) {
 // GSAP
 gsap.registerPlugin(TextPlugin);
 gsap.to(".home .header_home p", {
-  duration: 15,
+  duration: 10,
   delay: 2,
   text: "Jasa Paket Pernikahan Lengkap <br/>  Melayani semua kebutuhan pernikahan, termasuk Honney Moon, Dekorasi Pelaminan, Gaun Pengantin, Entertain, Dokumentasi, Peralatan Pesta dll.",
 });

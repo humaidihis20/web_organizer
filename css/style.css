@@ -36,6 +36,7 @@
   padding: 0;
   outline: none;
   box-sizing: border-box;
+  transition: all 0.2s linear;
 }
 
 html {
@@ -477,13 +478,13 @@ section {
   text-align: center;
   font-family: var(--Balsamiq);
   width: 900px;
-  height: 200px;
+  height: 220px;
   align-items: center;
   font-size: 25px;
   color: black;
   font-weight: 550;
   box-sizing: border-box;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 1);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 1);
 }
 
 .gambar_honney_moon {
@@ -745,13 +746,93 @@ section {
   font-size: 13px;
   color: var(--midnight);
 }
-
 /* End Testimoni */
+
+/* Footer */
+section.footer {
+  margin-top: 50px;
+  background-color: rgb(238, 237, 237);
+}
+
+section .container_footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+section .container_footer .content_footer {
+  padding: 1rem 0;
+  flex: 1 15rem;
+  font-family: var(--Livvic);
+}
+
+section .container_footer .content_footer h1 {
+  font-size: 28px;
+  font-family: var(--Livvic);
+  padding: 0.7rem 0;
+  color: var(--midnight);
+}
+
+section .container_footer .content_footer p {
+  font-size: 20px;
+  padding: 0.7rem 0;
+  color: var(--midnight);
+}
+
+section .container_footer .content_footer ul li {
+  list-style: none;
+  padding: 0.5rem 0.2rem;
+}
+
+section .container_footer .content_footer ul li a {
+  font-size: 1.2rem;
+  color: var(--midnight);
+  text-decoration: none;
+}
+
+section .container_footer .content_footer ul li a:hover {
+  color: #26a69a;
+}
+
+section .container_footer .content_footer ul li a i {
+  color: #00695c;
+}
+
+section .container_footer .content_footer ul li a i:hover {
+  color: #26a69a;
+}
+
+section .container_footer .content_footer ul li a.wa:hover i {
+  padding-right: 1rem;
+}
+
+section .credit {
+  text-align: center;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--midnight);
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  font-family: var(--Livvic);
+}
+
+section .credit span {
+  color: #26a69a;
+}
+
+section .credit span:hover {
+  color: var(--midnight);
+}
+/* End Footer */
 
 @media screen and (max-width: 970px) {
   .content_honney_moon p {
     width: 700px;
     box-shadow: none;
+  }
+  section {
+    padding: 2rem;
   }
 }
 
