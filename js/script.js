@@ -45,6 +45,26 @@ searchBtn.addEventListener("click", function () {
 //   navbar.classList.toggle("active");
 // };
 
+// Scroll Active
+const sections = document.querySelectorAll("section[id]");
+
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+
+  for (const current of sections) {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 10;
+    sectionId = current.getAttribute("id");
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document.querySelector(".navbar a[href*=" + sectionId + "]").classList.add("active-link");
+    } else {
+      document.querySelector(".navbar a[href*=" + sectionId + "]").classList.remove("active-link");
+    }
+  }
+}
+window.addEventListener("scroll", scrollActive);
+
 // Sticky Navbar
 let navbarSticky = document.getElementById("nav");
 

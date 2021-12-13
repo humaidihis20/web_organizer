@@ -196,6 +196,10 @@ form.search-container label:hover {
   top: 0;
   width: 100%;
 }
+
+.active-link {
+  color: #4db6ac;
+}
 /* End Navbar */
 
 /* Home */
